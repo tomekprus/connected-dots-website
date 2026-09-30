@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connected Dots – dokumentacja i content design</title>
+<meta name="description" content="Connected Dots pomaga firmom uporządkować dokumentację i komunikację wokół skomplikowanych produktów – od technical writingu po content design.">
+<!-- TODO po wyborze domeny: <link rel="canonical">, og:url, og:image (1200×630, adres bezwzględny) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Connected Dots">
+<meta property="og:title" content="Connected Dots – dokumentacja i content design">
+<meta property="og:description" content="Skomplikowany produkt. Prosta dokumentacja. Technical writing, content design i audyt dokumentacji.">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#151515">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Connected Dots","description":"Technical writing, content design, przebudowa i audyt dokumentacji dla firm rozwijających skomplikowane produkty.","founder":{"@type":"Person","name":"Tomasz Prus","jobTitle":"Technical writer i content designer"},"knowsLanguage":["pl","en"],"serviceType":["Technical writing","Content design","UX writing","Audyt dokumentacji"]}</script>
+<style>
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:500 700;font-display:swap;src:url(fonts/space-grotesk-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:500 700;font-display:swap;src:url(fonts/space-grotesk-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--bg:#F5F3EE;--text:#151515;--accent:#D94F2B;--white:#FFFFFF;--dark-overlay:rgba(21,21,21,.70);--line:rgba(21,21,21,.14);--font-head:"Space Grotesk",sans-serif;--font-body:"Inter",sans-serif;--container:1280px;--section-space:clamp(5rem,10vw,10rem);--block-space:clamp(2rem,5vw,5rem);--radius:4px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{margin:0;overflow-x:clip;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:clamp(1rem,.35vw + .92rem,1.125rem);line-height:1.65}img{display:block;max-width:100%;height:auto}figure{margin:0}a{color:inherit}p,li{max-width:65ch;text-wrap:pretty}h1,h2,h3{margin:0;font-family:var(--font-head);line-height:1.1;letter-spacing:-.035em;text-wrap:balance;hyphens:none;word-break:normal;overflow-wrap:normal}h1{max-width:20ch;font-size:clamp(2.1rem,6vw + .5rem,4.75rem)}h2{font-size:clamp(1.7rem,2.5vw + 1rem,3rem)}h3{font-size:clamp(1.25rem,1.25vw + 1rem,2rem)}.container{width:min(calc(100% - 2rem),var(--container));margin-inline:auto}.section{padding-block:var(--section-space);border-top:1px solid var(--line)}.section-head{margin-bottom:var(--block-space)}.section-head p{margin:1.25rem 0 0}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.3rem;border:2px solid var(--accent);border-radius:var(--radius);background:var(--accent);color:var(--white);font-weight:600;text-decoration:none;line-height:1.1;transition:transform .2s ease,filter .2s ease}.btn-small{min-height:48px;padding:.7rem 1rem}.site-header{position:absolute;z-index:20;top:0;left:0;right:0;padding:1rem 0;color:var(--white)}.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{font-family:var(--font-head);font-weight:700;font-size:1.1rem;text-decoration:none}.header-actions{display:flex;align-items:center;gap:1rem}.lang-switch{display:flex;align-items:center;gap:.4rem;font-family:var(--font-head);font-weight:600}.lang-btn{min-width:36px;min-height:48px;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer;opacity:.58}.lang-btn.is-active{opacity:1;text-decoration:underline;text-underline-offset:.3em}.lang-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--white);background:var(--text)}.hero-media{position:absolute;inset:0;margin:0}.hero-media img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;animation:heroZoom 8s ease-out both}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--dark-overlay),rgba(21,21,21,.42))}.hero-content{position:relative;z-index:2;padding-top:7rem;padding-bottom:4rem}.hero h1{margin-bottom:1.5rem}.hero-copy{max-width:56ch;margin:0 0 1.75rem;font-size:clamp(1.05rem,.8vw + .9rem,1.35rem)}.hero-audience{max-width:55ch;margin:0 0 2rem}.hero-note{margin:1rem 0 0;max-width:48ch;font-size:.9rem}.hero-seq{opacity:0;transform:translateY(24px);animation:heroIn .7s ease forwards}.hero-seq:nth-child(2){animation-delay:.15s}.hero-seq:nth-child(3){animation-delay:.3s}.hero-seq:nth-child(4){animation-delay:.45s}.hero-seq:nth-child(5){animation-delay:.6s}.services{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(2rem,7vw,7rem)}.not-for{max-width:760px;margin-top:var(--block-space);padding:2rem;border:1px solid var(--line)}.not-for h3{margin-bottom:1rem}.not-for p{margin:0}.problem-layout,.proof-layout,.about,.portfolio-item,.faq-wrap{display:flex;flex-wrap:wrap;gap:clamp(2rem,7vw,7rem);align-items:flex-start}.problem-intro{flex:0 1 32%}.problem-intro h2{margin-bottom:1.5rem}.quotes{flex:1 1 55%}blockquote{margin:0;padding:1.6rem 0;max-width:34ch;border-bottom:1px solid var(--line);font-family:var(--font-head);font-size:clamp(1.3rem,1.5vw + .9rem,2rem);line-height:1.3;text-wrap:pretty}.before-after{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--line)}.ba-item{padding:clamp(1.5rem,3vw,3rem) 0;border-bottom:1px solid var(--line)}.ba-item:nth-child(odd){padding-right:clamp(1rem,5vw,5rem)}.ba-item:nth-child(even){padding-left:clamp(1rem,5vw,5rem);border-left:1px solid var(--line)}.ba-label{font-family:var(--font-head);font-weight:600;margin:0 0 .7rem}.ba-item p:last-child{margin:0}.service{padding:2rem 0;border-top:1px solid var(--line)}.service h3{margin-bottom:.8rem}.service p{margin:0}.section-cta{margin-top:2.5rem}.portfolio-item{align-items:center;padding:clamp(3rem,7vw,7rem) 0;border-top:1px solid var(--line)}.portfolio-item:nth-of-type(even){flex-direction:row-reverse}.portfolio-media{flex:1 1 58%}.portfolio-copy{flex:1 1 34%}.portfolio-media img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius)}.portfolio-copy h3{margin-bottom:1.5rem}.portfolio-copy strong{display:block;font-family:var(--font-head);margin-top:1.25rem}.portfolio-copy p{margin:.35rem 0}.steps{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.9fr) minmax(0,1.15fr);gap:clamp(1.5rem,4vw,4rem)}.step{padding-top:1.5rem;border-top:1px solid var(--text)}.step-number{font-family:var(--font-head);font-size:1rem;margin-bottom:2rem}.step h3{margin-bottom:1rem}.step p{margin:.5rem 0}.proof-main{flex:1 1 52%}.proof-side{flex:1 1 30%}.big-fact{font-family:var(--font-head);font-size:clamp(2rem,3.5vw + 1rem,4.5rem);line-height:1;letter-spacing:-.05em;margin:1.5rem 0 1rem}.proof-block{padding:1.3rem 0;border-top:1px solid var(--line)}.proof-block h3{font-size:1.2rem;margin-bottom:.4rem}.proof-block p{margin:0}.about{align-items:center}.about figure{flex:1 1 42%}.about-copy{flex:1 1 48%}.about figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:var(--radius)}.about-copy h2{margin-bottom:1.5rem}.model{max-width:780px;margin-inline:auto}.model h2{margin-bottom:1.5rem}.model-facts{margin-top:2rem;border-top:1px solid var(--line)}.model-facts p{margin:0;padding:1rem 0;border-bottom:1px solid var(--line)}.faq-title{flex:0 1 30%}.faq-list{flex:1 1 58%}details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;list-style:none;min-height:64px;padding:1.2rem 2.5rem 1.2rem 0;position:relative;font-family:var(--font-head);font-size:clamp(1.05rem,.6vw + 1rem,1.3rem);font-weight:600}summary::-webkit-details-marker{display:none}summary::after{content:"+";position:absolute;right:.2rem;top:1.05rem;font-size:1.5rem}details[open] summary::after{content:"−"}details p{margin:0;padding:0 2rem 1.5rem 0}.booking-intro{max-width:760px;margin-bottom:3rem}.booking-intro h2{margin-bottom:1.3rem}.booking-note{font-size:.9rem}.cal-shell{width:100%;height:780px;min-height:680px;background:var(--white);border:1px solid var(--line)}.cal-embed{width:100%;height:100%;overflow:auto}.booking-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;margin-top:1.25rem}.booking-links p{margin:0}.calendar-link{font-weight:600}.footer{padding:3rem 0;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}.footer-brand{font-family:var(--font-head);font-size:1.25rem;font-weight:700}.footer p{margin:.3rem 0}.footer-legal{margin-top:2rem;font-size:.875rem}.anim .reveal:not(.is-visible){opacity:0;transform:translateY(24px)}.anim .reveal{transition:opacity .6s ease,transform .6s ease}.anim .reveal.is-visible{opacity:1;transform:none}@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}@keyframes heroIn{to{opacity:1;transform:none}}
+@media(max-width:767px){:root{--section-space:5rem;--block-space:2.5rem}.hero{align-items:flex-end}.hero::after{background:linear-gradient(0deg,var(--dark-overlay),rgba(21,21,21,.52))}.hero-media img{object-position:58% center}.hero-content{padding-top:7rem;padding-bottom:3rem}.hero h1{margin-bottom:1rem}.hero-copy{font-size:1rem;margin-bottom:1rem}.hero-audience{font-size:.9rem;margin-bottom:1.35rem}.hero-note{font-size:.875rem}.services,.steps{grid-template-columns:minmax(0,1fr)}.not-for{padding:1.5rem}.before-after{grid-template-columns:minmax(0,1fr)}.ba-item:nth-child(odd),.ba-item:nth-child(even){padding-left:0;padding-right:0;border-left:0}.ba-item:nth-child(even){padding-top:0}.portfolio-item,.portfolio-item:nth-of-type(even){flex-direction:column}.portfolio-media,.portfolio-copy{width:100%}.steps{gap:2.5rem}.about{align-items:flex-start}.about figure,.about-copy{flex-basis:100%}.about figure{max-width:520px}.cal-shell{height:720px;min-height:650px}}
+@media(max-width:420px){body{font-size:1rem}.header-actions{gap:.45rem}.lang-switch{gap:.15rem}.lang-btn{min-width:30px}.header-inner .btn{padding:.65rem .75rem}.container{width:min(calc(100% - 1.5rem),var(--container))}.brand{max-width:120px}.hero-content{padding-bottom:2rem}.hero-audience{display:none}.section{padding-block:4.5rem}.cal-shell{height:680px}}
+@media(hover:hover) and (pointer:fine){.btn:hover{transform:translateY(-2px);filter:brightness(.9)}.portfolio-media img,.about img{transition:transform .35s ease}.portfolio-media:hover img,.about figure:hover img{transform:scale(1.015)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.anim .reveal{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+      <a class="brand" href="#top">Connected Dots</a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Wybór języka" data-i18n-aria="lang.label">
+          <button type="button" class="lang-btn is-active" data-lang="pl" aria-pressed="true">PL</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-small" href="#rezerwacja" data-i18n="cta">Umawiam rozmowę</a>
+      </div>
+    </div></header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title"><figure class="hero-media"><img src="hero.jpg" alt="Stanowisko pracy nad dokumentacją techniczną i strukturą informacji" data-i18n-alt="hero.img" width="1920" height="1080" fetchpriority="high" onerror="this.closest('figure').remove()"></figure><div class="container hero-content"><h1 id="hero-title" class="hero-seq" data-i18n="hero.title">Skomplikowany produkt. Prosta dokumentacja.</h1><p class="hero-copy hero-seq" data-i18n="hero.copy">Pomagam firmom uporządkować dokumentację i komunikację wokół skomplikowanych produktów – od technical writingu po content design.</p><p class="hero-audience hero-seq" data-i18n="hero.audience">Dla startupów, małych firm i dużych organizacji rozwijających software, hardware i złożone usługi.</p><a class="btn hero-seq" href="#rezerwacja" data-i18n="cta">Umawiam rozmowę</a><p class="hero-note hero-seq" data-i18n="hero.note">Po kliknięciu przejdziesz do kalendarza i wybierzesz dogodny termin.</p></div></section>
+<section class="section" id="problem"><div class="container problem-layout"><div class="problem-intro reveal"><h2 data-i18n="problem.title">Gdy produkt wyprzedza dokumentację</h2><p data-i18n="problem.lead">Connected Dots jest dla zespołów, które mają dobry, ale skomplikowany produkt i coraz trudniej jest im dobrze wytłumaczyć go użytkownikom.</p><p data-i18n="problem.more">Jeśli brzmi to znajomo, nie zawsze trzeba pisać wszystko od nowa. Najpierw trzeba sprawdzić, co właściwie nie działa.</p></div><div class="quotes"><blockquote class="reveal" data-i18n="q1">„Mamy mnóstwo dokumentacji, ale nikt już nad nią nie panuje.”</blockquote><blockquote class="reveal" data-i18n="q2">„Nasz produkt urósł, a dokumentacja za nim nie nadążyła.”</blockquote><blockquote class="reveal" data-i18n="q3">„Developerzy piszą dokumentację, ale potrzebujemy kogoś, kto zajmie się nią całościowo.”</blockquote><blockquote class="reveal" data-i18n="q4">„Nasz produkt jest skomplikowany i trudno nam dobrze wytłumaczyć użytkownikom, jak z niego korzystać.”</blockquote><blockquote class="reveal" data-i18n="q5">„Dokumentacja mówi jedno, interfejs drugie, a onboarding jeszcze coś innego.”</blockquote></div></div></section>
+<section class="section" id="przed-po"><div class="container"><div class="section-head reveal"><h2 data-i18n="ba.title">Co ma się zmienić?</h2></div><div class="before-after"><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.before">Dziś</p><p data-i18n="ba.b1">Dokumentację piszą developerzy, kiedy znajdą na to czas.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.after">Po współpracy</p><p data-i18n="ba.a1">Zespół techniczny może skupić się na produkcie, a dokumentacją zajmuje się ktoś, kto patrzy na nią całościowo.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.before">Dziś</p><p data-i18n="ba.b2">Treści jest dużo, ale trudno się w nich odnaleźć.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.after">Po współpracy</p><p data-i18n="ba.a2">Użytkownik łatwiej dociera do informacji, której potrzebuje.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.before">Dziś</p><p data-i18n="ba.b3">Produkt rozwijał się szybciej niż jego dokumentacja.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.after">Po współpracy</p><p data-i18n="ba.a3">Dokumentacja ma strukturę, którą można dalej rozwijać razem z produktem.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.before">Dziś</p><p data-i18n="ba.b4">Trudno wytłumaczyć użytkownikowi skomplikowany produkt.</p></div><div class="ba-item reveal"><p class="ba-label" data-i18n="ba.after">Po współpracy</p><p data-i18n="ba.a4">Produkt mówi do użytkownika prościej – w dokumentacji i interfejsie.</p></div></div></div></section>
+<section class="section" id="oferta"><div class="container"><div class="section-head reveal"><h2 data-i18n="services.title">W czym mogę pomóc?</h2></div><div class="services"><article class="service reveal"><h3 data-i18n="s1.title">Dokumentacja od zera</h3><p data-i18n="s1.text">Dostajesz strukturę i treści, dzięki którym użytkownik może zrozumieć produkt bez ciągłego pytania Twojego zespołu o pomoc.</p></article><article class="service reveal"><h3 data-i18n="s2.title">Przebudowa dokumentacji</h3><p data-i18n="s2.text">Nie zaczynam od wyrzucania wszystkiego do kosza. Sprawdzam, co działa, co przeszkadza użytkownikom i co warto uporządkować.</p></article><article class="service reveal"><h3 data-i18n="s3.title">UX writing i content design</h3><p data-i18n="s3.text">Porządkuję komunikację również tam, gdzie użytkownik faktycznie korzysta z produktu – w interfejsie i podczas onboardingu.</p></article><article class="service reveal"><h3 data-i18n="s4.title">Audyt i konsulting</h3><p data-i18n="s4.text">Jeżeli nie wiesz jeszcze, czego potrzebujesz, zaczynamy od diagnozy. Dostajesz obraz obecnej sytuacji i propozycję dalszych działań.</p></article></div><div class="not-for reveal"><h3 data-i18n="notfor.title">Czego nie robię</h3><p data-i18n="notfor.text">Nie zajmuję się copywritingiem sprzedażowym, prowadzeniem social mediów ani tłumaczeniami.</p></div><div class="section-cta reveal"><a class="btn" href="#rezerwacja" data-i18n="cta">Umawiam rozmowę</a></div></div></section>
+<section class="section" id="portfolio"><div class="container"><div class="section-head reveal"><h2 data-i18n="portfolio.title">Zobacz, jak pracuję</h2><p data-i18n="portfolio.lead">Nie chcę pokazywać tylko gotowych tekstów. Każdy case pokazuje problem, moją rolę, wykonaną pracę i efekt.</p></div><article class="portfolio-item"><figure class="portfolio-media reveal"><img src="oferta-1.jpg" alt="Przykład dokumentacji technicznej w portfolio Connected Dots" data-i18n-alt="portfolio.img" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"><figcaption data-i18n="portfolio.caption">Przykład pracy nad dokumentacją produktu.</figcaption></figure><div class="portfolio-copy reveal"><h3>Case study 01 – <span data-i18n="todo">(do uzupełnienia)</span></h3><strong data-i18n="pf.problem">Problem</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.role">Moja rola</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.did">Co zrobiłem</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.outcome">Efekt</strong><p data-i18n="todo">(do uzupełnienia)</p></div></article><article class="portfolio-item"><div class="portfolio-copy reveal"><h3>Case study 02 – <span data-i18n="todo">(do uzupełnienia)</span></h3><strong data-i18n="pf.problem">Problem</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.role">Moja rola</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.did">Co zrobiłem</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.outcome">Efekt</strong><p data-i18n="todo">(do uzupełnienia)</p></div></article><article class="portfolio-item"><div class="portfolio-copy reveal"><h3>Case study 03 – <span data-i18n="todo">(do uzupełnienia)</span></h3><strong data-i18n="pf.problem">Problem</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.role">Moja rola</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.did">Co zrobiłem</strong><p data-i18n="todo">(do uzupełnienia)</p><strong data-i18n="pf.outcome">Efekt</strong><p data-i18n="todo">(do uzupełnienia)</p></div></article></div></section>
+<section class="section" id="proces"><div class="container"><div class="section-head reveal"><h2 data-i18n="process.title">Zaczynamy od problemu</h2></div><div class="steps"><article class="step reveal"><p class="step-number">01</p><h3 data-i18n="p1.title">Rozmawiamy</h3><p data-i18n="p1.a">Klikasz „Umawiam rozmowę” i wybierasz termin.</p><p data-i18n="p1.b">Rozmawiamy o produkcie, użytkownikach i o tym, co dziś nie działa.</p></article><article class="step reveal"><p class="step-number">02</p><h3 data-i18n="p2.title">Diagnozuję i proponuję zakres</h3><p data-i18n="p2.a">Sprawdzam istniejące treści, dokumentację i sposób pracy.</p><p data-i18n="p2.b">Ustalamy, co warto zachować, poprawić, przebudować lub stworzyć od zera.</p></article><article class="step reveal"><p class="step-number">03</p><h3 data-i18n="p3.title">Porządkuję i przekazuję</h3><p data-i18n="p3.a">Realizuję ustalony zakres i przekazuję gotowe treści oraz (sposób przekazania i utrzymania – do uzupełnienia).</p></article></div></div></section>
+<section class="section" id="dowody"><div class="container proof-layout"><div class="proof-main reveal"><h2 data-i18n="proof.title">Doświadczenie przy złożonych produktach</h2><p class="big-fact" data-i18n="proof.fact">Kilkanaście lat doświadczenia</p><p data-i18n="proof.text1">W technical writingu, content designie i zarządzaniu zespołami dokumentacyjnymi.</p><p data-i18n="proof.text2">Dlatego patrzę nie tylko na pojedynczy tekst, ale też na to, jak dokumentacja powstaje, kto za nią odpowiada i jak będzie później utrzymywana.</p></div><div class="proof-side"><div class="proof-block reveal"><h3 data-i18n="proof.clients">Klienci / projekty</h3><p data-i18n="todo">(do uzupełnienia)</p></div><div class="proof-block reveal"><h3 data-i18n="proof.reviews">Opinie klientów</h3><p data-i18n="todo">(do uzupełnienia)</p></div><div class="proof-block reveal"><h3 data-i18n="proof.numbers">Liczby</h3><p data-i18n="todo">(do uzupełnienia)</p></div></div></div></section>
+<section class="section" id="o-mnie"><div class="container about"><figure class="reveal"><img src="o-mnie.jpg" alt="Tomasz Prus z Connected Dots podczas pracy" data-i18n-alt="about.img" width="1200" height="1500" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></figure><div class="about-copy reveal"><h2 data-i18n="about.title">Cześć, jestem Tomasz.</h2><p data-i18n="about.p1">Znam dokumentację z dwóch stron: jako osoba, która ją pisze, i jako lider zespołu, który musi nad nią zapanować.</p><p data-i18n="about.p2">Connected Dots stworzyłem po to, żeby pomagać firmom wtedy, gdy produkt robi się skomplikowany, treści przybywa, a samo „napiszmy więcej dokumentacji” przestaje być rozwiązaniem.</p><p data-i18n="about.p3">Stąd nazwa. Wiedza o produkcie jest zwykle rozproszona – w głowach developerów, w starych plikach, w interfejsie. Moja praca polega na tym, żeby połączyć te kropki w całość, którą użytkownik rozumie.</p><p data-i18n="about.p4">Mogę dołączyć do zespołu zdalnie, pracować hybrydowo albo pojawić się u klienta.</p></div></div></section>
+<section class="section" id="wspolpraca"><div class="container model reveal"><h2 data-i18n="model.title">Projekty, które wymagają czasu</h2><p data-i18n="model.text">Pracuję przede wszystkim przy dłuższych projektach, w których mogę poznać produkt i rzeczywiście uporządkować jego dokumentację lub komunikację.</p><div class="model-facts"><p><strong data-i18n="model.billing">Rozliczenie:</strong> <span data-i18n="model.billingValue">stawka godzinowa.</span></p><p><strong data-i18n="model.rate">Stawka:</strong> <span data-i18n="todo">(do uzupełnienia)</span></p><p><strong data-i18n="model.min">Minimalny zakres współpracy:</strong> <span data-i18n="todo">(do uzupełnienia)</span></p></div><p data-i18n="model.note">Nie musisz przed pierwszą rozmową wiedzieć, jak dużego projektu potrzebujesz. Ustalimy to na podstawie problemu i obecnego stanu dokumentacji.</p></div></section>
+<section class="section" id="faq"><div class="container faq-wrap"><div class="faq-title reveal"><h2 data-i18n="faq.title">Zanim porozmawiamy</h2></div><div class="faq-list"><details class="reveal"><summary data-i18n="faq.q1">Czy możesz stworzyć dokumentację od zera?</summary><p data-i18n="faq.a1">Tak. Mogę zaprojektować jej strukturę i przygotować treści dla istniejącego lub rozwijanego produktu.</p></details><details class="reveal"><summary data-i18n="faq.q2">Czy musimy zaczynać od nowa?</summary><p data-i18n="faq.a2">Nie. Najpierw sprawdzam, co już macie. Audyt pozwala ustalić, co warto zachować, poprawić, przebudować lub usunąć.</p></details><details class="reveal"><summary data-i18n="faq.q3">Czy pracujesz z developerami?</summary><p data-i18n="faq.a3">Tak. Mogę pracować bezpośrednio z zespołami technicznymi i produktowymi.</p></details><details class="reveal"><summary data-i18n="faq.q4">Czy musisz pracować u nas?</summary><p data-i18n="faq.a4">Nie. Mogę pracować zdalnie, hybrydowo albo na miejscu – zależnie od potrzeb projektu i zespołu.</p></details><details class="reveal"><summary data-i18n="faq.q5">Czy tworzysz teksty w interfejsie?</summary><p data-i18n="faq.a5">Tak. UX writing i content design są częścią oferty Connected Dots.</p></details><details class="reveal"><summary data-i18n="faq.q6">Jak długo trwa projekt?</summary><p data-i18n="faq.a6">To zależy od produktu, obecnego stanu treści i zakresu prac. Zaczynam od diagnozy, żeby ustalić, czego rzeczywiście potrzebujecie.</p></details></div></div></section>
+<section class="section" id="rezerwacja"><div class="container"><div class="booking-intro reveal"><h2 data-i18n="booking.title">Zacznijmy od tego, co nie działa</h2><p data-i18n="booking.lead">Nie musisz wiedzieć, czy potrzebujesz audytu, nowej dokumentacji czy przebudowy tego, co już masz. Opowiedz mi o produkcie i problemie. Od tego zaczniemy.</p><p><strong data-i18n="booking.first">Pierwsza rozmowa:</strong> <span data-i18n="booking.firstTodo">(do uzupełnienia – np. 30 minut, bezpłatnie, bez zobowiązań)</span></p><!-- TODO: podlinkować politykę prywatności, gdy powstanie --><p class="booking-note" data-i18n="booking.privacy">Kalendarz obsługuje serwis Cal.com. Rezerwując termin, przekazujesz mu swoje dane kontaktowe – szczegóły znajdziesz w polityce prywatności.</p></div><div class="cal-shell"><div class="cal-embed" id="my-cal-inline-connected-dots-let-s-chat"></div></div><div class="booking-links"><a class="calendar-link" href="https://app.cal.com/tomasz-prus-fwahiv/connected-dots-let-s-chat" target="_blank" rel="noopener noreferrer" data-i18n="booking.newTab">Otwórz kalendarz w nowej karcie</a><p><span data-i18n="booking.write">Wolisz najpierw napisać?</span> <span data-i18n="footer.email">E-mail:</span> <span data-i18n="todo">(do uzupełnienia)</span> · LinkedIn: <span data-i18n="todo">(do uzupełnienia)</span></p></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-inner"><div><p class="footer-brand">Connected Dots</p><p data-i18n="footer.tagline">Technical writing · Content design · Dokumentacja · Konsulting</p></div><div><p><span data-i18n="footer.email">E-mail:</span> <span data-i18n="todo">(do uzupełnienia)</span></p><p><span data-i18n="footer.phone">Telefon:</span> <span data-i18n="todo">(do uzupełnienia)</span></p><p>LinkedIn: <span data-i18n="todo">(do uzupełnienia)</span></p></div></div><div class="footer-legal"><p><span data-i18n="footer.company">Dane firmy:</span> <span data-i18n="footer.companyTodo">(do uzupełnienia – pełna nazwa, adres, NIP)</span></p><p><span data-i18n="footer.privacy">Polityka prywatności:</span> <span data-i18n="todo">(do uzupełnienia)</span></p><p>© <span id="year">2026</span> Connected Dots</p></div></div></footer>
+<script>
+const EN = {
+  'meta.title': 'Connected Dots – documentation and content design',
+  'meta.description': 'Connected Dots helps companies bring clarity to documentation and communication around complex products – from technical writing to content design.',
+  'lang.label': 'Language selection',
+  'todo': '(to be completed)',
+  'cta': 'Book a call',
+  'hero.img': 'Workspace for technical documentation and information architecture',
+  'hero.title': 'Complex product. Clear documentation.',
+  'hero.copy': 'I help companies bring clarity to documentation and communication around complex products – from technical writing to content design.',
+  'hero.audience': 'For startups, small companies and large organizations building software, hardware and complex services.',
+  'hero.note': 'Choose a convenient time directly in my calendar.',
+  'problem.title': 'When the product outgrows the docs',
+  'problem.lead': 'Connected Dots is for teams with a good but complex product that is becoming increasingly difficult to explain clearly to users.',
+  'problem.more': 'If this sounds familiar, you don’t necessarily need to rewrite everything from scratch. First, we need to find out what is actually not working.',
+  'q1': '“We have a huge amount of documentation, but nobody really has control over it anymore.”',
+  'q2': '“Our product has grown, but the documentation hasn’t kept up.”',
+  'q3': '“Developers write the documentation, but we need someone to take ownership of it as a whole.”',
+  'q4': '“Our product is complex and we struggle to explain clearly how users should work with it.”',
+  'q5': '“The docs say one thing, the interface another and onboarding something else again.”',
+  'ba.title': 'What should change?',
+  'ba.before': 'Today',
+  'ba.after': 'After we work together',
+  'ba.b1': 'Developers write documentation whenever they can find the time.',
+  'ba.a1': 'The technical team can focus on the product while someone takes end-to-end ownership of the documentation.',
+  'ba.b2': 'There is plenty of content, but it is difficult to navigate.',
+  'ba.a2': 'Users can find the information they need more easily.',
+  'ba.b3': 'The product evolved faster than its documentation.',
+  'ba.a3': 'The documentation has a structure that can grow together with the product.',
+  'ba.b4': 'It is difficult to explain a complex product to users.',
+  'ba.a4': 'The product communicates more clearly – in both the documentation and the interface.',
+  'services.title': 'How can I help?',
+  's1.title': 'Documentation from scratch',
+  's1.text': 'You get a structure and content that help users understand the product without constantly asking your team for help.',
+  's2.title': 'Documentation redesign',
+  's2.text': 'I don’t start by throwing everything away. I identify what works, what gets in users’ way and what should be reorganized.',
+  's3.title': 'UX writing and content design',
+  's3.text': 'I also improve communication where users actually interact with the product – in the interface and during onboarding.',
+  's4.title': 'Audit and consulting',
+  's4.text': 'If you are not yet sure what you need, we start with a diagnosis. You get a clear view of the current situation and a proposed way forward.',
+  'notfor.title': 'What I don’t do',
+  'notfor.text': 'I don’t provide sales copywriting, social media management or translation services.',
+  'portfolio.title': 'See how I work',
+  'portfolio.lead': 'I don’t want to show only finished copy. Each case study explains the problem, my role, the work I did and the outcome.',
+  'portfolio.img': 'Example of technical documentation in the Connected Dots portfolio',
+  'portfolio.caption': 'Example of product documentation work.',
+  'pf.problem': 'Problem',
+  'pf.role': 'My role',
+  'pf.did': 'What I did',
+  'pf.outcome': 'Outcome',
+  'process.title': 'We start with the problem',
+  'p1.title': 'We talk',
+  'p1.a': 'You click “Book a call” and choose a time.',
+  'p1.b': 'We talk about the product, its users and what is not working today.',
+  'p2.title': 'I diagnose and define the scope',
+  'p2.a': 'I review the existing content, documentation and workflow.',
+  'p2.b': 'We decide what should be kept, improved, rebuilt or created from scratch.',
+  'p3.title': 'I bring order and hand over',
+  'p3.a': 'I deliver the agreed scope and hand over the finished content and (handover and maintenance approach – to be completed).',
+  'proof.title': 'Experience with complex products',
+  'proof.fact': 'Over a decade of experience',
+  'proof.text1': 'In technical writing, content design and managing documentation teams.',
+  'proof.text2': 'That is why I look beyond individual pieces of content to how documentation is created, who owns it and how it will be maintained.',
+  'proof.clients': 'Clients / projects',
+  'proof.reviews': 'Client feedback',
+  'proof.numbers': 'Numbers',
+  'about.img': 'Tomasz Prus of Connected Dots at work',
+  'about.title': 'Hi, I’m Tomasz.',
+  'about.p1': 'I know documentation from both sides: as the person who writes it and as the lead of a team that needs to keep it under control.',
+  'about.p2': 'I created Connected Dots to help companies when their product becomes complex, content keeps growing and “let’s write more documentation” is no longer a solution.',
+  'about.p3': 'Hence the name. Product knowledge is usually scattered – in developers’ heads, in old files, in the interface. My job is to connect those dots into something users understand.',
+  'about.p4': 'I can join your team remotely, work in a hybrid setup or work on site.',
+  'model.title': 'Projects that need time',
+  'model.text': 'I focus mainly on longer engagements where I can understand the product and genuinely improve its documentation or communication.',
+  'model.billing': 'Billing:',
+  'model.billingValue': 'hourly rate.',
+  'model.rate': 'Rate:',
+  'model.min': 'Minimum engagement:',
+  'model.note': 'You don’t need to know the size of the project before our first call. We will define it based on the problem and the current state of your documentation.',
+  'faq.title': 'Before we talk',
+  'faq.q1': 'Can you create documentation from scratch?',
+  'faq.a1': 'Yes. I can design the structure and create content for an existing or developing product.',
+  'faq.q2': 'Do we need to start from scratch?',
+  'faq.a2': 'No. I first review what you already have. An audit helps determine what should be kept, improved, rebuilt or removed.',
+  'faq.q3': 'Do you work with developers?',
+  'faq.a3': 'Yes. I can work directly with technical and product teams.',
+  'faq.q4': 'Do you need to work on site?',
+  'faq.a4': 'No. I can work remotely, in a hybrid setup or on site – depending on the project and team.',
+  'faq.q5': 'Do you write interface content?',
+  'faq.a5': 'Yes. UX writing and content design are part of the Connected Dots offer.',
+  'faq.q6': 'How long does a project take?',
+  'faq.a6': 'It depends on the product, the current state of the content and the scope. I start with a diagnosis to determine what you actually need.',
+  'booking.title': 'Let’s start with what isn’t working',
+  'booking.lead': 'You don’t need to know whether you need an audit, new documentation or a redesign of what you already have. Tell me about the product and the problem. We’ll start there.',
+  'booking.first': 'First call:',
+  'booking.firstTodo': '(to be completed – e.g. 30 minutes, free, no obligation)',
+  'booking.privacy': 'The calendar is provided by Cal.com. When you book a time, you share your contact details with this service – see the privacy policy for details.',
+  'booking.newTab': 'Open calendar in a new tab',
+  'booking.write': 'Prefer to write first?',
+  'footer.tagline': 'Technical writing · Content design · Documentation · Consulting',
+  'footer.email': 'Email:',
+  'footer.phone': 'Phone:',
+  'footer.company': 'Company details:',
+  'footer.companyTodo': '(to be completed – full name, address, tax ID)',
+  'footer.privacy': 'Privacy policy:'
+};
+
+// Polish: keep one-letter words (a, i, o, u, w, z) with the next word
+const bindOrphans = text => text.replace(/(?<=^|\s)([aiouwz])\s+/gi, '$1 ');
+
+const textEls = [...document.querySelectorAll('[data-i18n]')].map(el => ({ el, key: el.dataset.i18n, pl: el.textContent }));
+const altEls = [...document.querySelectorAll('[data-i18n-alt]')].map(el => ({ el, key: el.dataset.i18nAlt, pl: el.alt }));
+const ariaEls = [...document.querySelectorAll('[data-i18n-aria]')].map(el => ({ el, key: el.dataset.i18nAria, pl: el.getAttribute('aria-label') }));
+const metaDescription = document.querySelector('meta[name="description"]');
+const plTitle = document.title;
+const plDescription = metaDescription.content;
+
+function setLanguage(lang) {
+  const en = lang === 'en';
+  document.documentElement.lang = lang;
+  textEls.forEach(({ el, key, pl }) => { el.textContent = en ? EN[key] ?? pl : bindOrphans(pl); });
+  altEls.forEach(({ el, key, pl }) => { el.alt = en ? EN[key] ?? pl : pl; });
+  ariaEls.forEach(({ el, key, pl }) => el.setAttribute('aria-label', en ? EN[key] ?? pl : pl));
+  document.title = en ? EN['meta.title'] : plTitle;
+  metaDescription.content = en ? EN['meta.description'] : plDescription;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  try { localStorage.setItem('connectedDotsLanguage', lang); } catch (e) {}
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
+// Polish is the default; English only after the visitor chooses it
+let savedLanguage = null;
+try { savedLanguage = localStorage.getItem('connectedDotsLanguage'); } catch (e) {}
+setLanguage(savedLanguage === 'en' ? 'en' : 'pl');
+
+if ('IntersectionObserver' in window) {
+  const items = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: .1 });
+  items.forEach((item, index) => { item.style.transitionDelay = `${Math.min(index % 3, 2) * 70}ms`; observer.observe(item); });
+  document.documentElement.classList.add('anim');
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Cal.com loads only when the booking section gets close to the viewport
+function loadCalendar() {
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "connected-dots-let-s-chat", { origin: "https://app.cal.com" });
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
+  Cal.ns["connected-dots-let-s-chat"]("inline", { elementOrSelector: "#my-cal-inline-connected-dots-let-s-chat", config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }, calLink: "tomasz-prus-fwahiv/connected-dots-let-s-chat" });
+  Cal.ns["connected-dots-let-s-chat"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+}
+const calShell = document.querySelector('.cal-shell');
+if ('IntersectionObserver' in window) {
+  const calObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) { calObserver.disconnect(); loadCalendar(); }
+  }, { rootMargin: '800px 0px' });
+  calObserver.observe(calShell);
+} else {
+  loadCalendar();
+}
+</script>
+</body>
+</html>
